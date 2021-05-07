@@ -1,0 +1,732 @@
+fileFormatVersion: 2
+guid: 6aabfeda76d5f4a4ca4a256d04f1a549
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -662771944358666601
+    second: Pikeman_0
+  - first:
+      213: -5234661423185970207
+    second: Pikeman_1
+  - first:
+      213: 8130731101311472860
+    second: Pikeman_2
+  - first:
+      213: 5370856393192665424
+    second: Pikeman_3
+  - first:
+      213: 6659258615353625465
+    second: Pikeman_4
+  - first:
+      213: -1188273781320548863
+    second: Pikeman_5
+  - first:
+      213: -2104282796878672656
+    second: Pikeman_6
+  - first:
+      213: -4661059779878522757
+    second: Pikeman_7
+  - first:
+      213: -8727676549477119978
+    second: Pikeman_8
+  - first:
+      213: -1716878538473105883
+    second: Pikeman_9
+  - first:
+      213: -5822146846145474311
+    second: Pikeman_10
+  - first:
+      213: 8300153080493461194
+    second: Pikeman_11
+  - first:
+      213: -4852174688979939612
+    second: Pikeman_12
+  - first:
+      213: -1505962897057306056
+    second: Pikeman_13
+  - first:
+      213: -7772082501247144971
+    second: Pikeman_14
+  - first:
+      213: -694946849737810377
+    second: Pikeman_15
+  - first:
+      213: 1174513548917415300
+    second: Pikeman_16
+  - first:
+      213: 4344471325781917250
+    second: Pikeman_17
+  - first:
+      213: 3161008424628053660
+    second: Pikeman_18
+  - first:
+      213: 820313737324245408
+    second: Pikeman_19
+  - first:
+      213: -7234005132939169762
+    second: Pikeman_20
+  - first:
+      213: 6189293000749323728
+    second: Pikeman_21
+  - first:
+      213: 6091457198451594947
+    second: Pikeman_22
+  - first:
+      213: 1933242593399442063
+    second: Pikeman_23
+  - first:
+      213: -7541503238415622763
+    second: Pikeman_24
+  - first:
+      213: 9012500998702636687
+    second: Pikeman_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pikeman_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 354
+        width: 48
+        height: 77
+      alignment: 9
+      pivot: {x: 0.4284233, y: 0.00026435356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e18699d6c5dc6f0800000000000000
+      internalID: -662771944358666601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 357
+        width: 50
+        height: 74
+      alignment: 9
+      pivot: {x: 0.45877153, y: -0.00000082479943}
+      border: {x: 0, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb3f878b2fba57b0800000000000000
+      internalID: -5234661423185970207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 357
+        width: 34
+        height: 86
+      alignment: 9
+      pivot: {x: 0.4242428, y: 0.004001351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd414e1bbd826d070800000000000000
+      internalID: 8130731101311472860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 356
+        width: 36
+        height: 86
+      alignment: 9
+      pivot: {x: 0.42685106, y: 0.009981732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05172effe6d198a40800000000000000
+      internalID: 5370856393192665424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 273
+        width: 50
+        height: 75
+      alignment: 9
+      pivot: {x: 0.47251454, y: 0.009161377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bcc9bad607a6c50800000000000000
+      internalID: 6659258615353625465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_5
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 272
+        width: 39
+        height: 76
+      alignment: 9
+      pivot: {x: 0.4999996, y: 0.004247565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e7a78aa47628fe0800000000000000
+      internalID: -1188273781320548863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 274
+        width: 45
+        height: 74
+      alignment: 9
+      pivot: {x: 0.508471, y: 0.0027111156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fcc419f1f51cc2e0800000000000000
+      internalID: -2104282796878672656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_7
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 276
+        width: 38
+        height: 73
+      alignment: 9
+      pivot: {x: 0.52811474, y: 0.00008904444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70fa7753d6905fb0800000000000000
+      internalID: -4661059779878522757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_8
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 275
+        width: 46
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618c8e16b6011e680800000000000000
+      internalID: -8727676549477119978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_9
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 275
+        width: 54
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52691dfc01c6c28e0800000000000000
+      internalID: -1716878538473105883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_10
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 274
+        width: 55
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0965d5a44933fa0800000000000000
+      internalID: -5822146846145474311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_11
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 275
+        width: 53
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace4d282041103370800000000000000
+      internalID: 8300153080493461194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 191
+        width: 36
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee853b04dc99acb0800000000000000
+      internalID: -4852174688979939612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 189
+        width: 42
+        height: 77
+      alignment: 9
+      pivot: {x: 0.56457794, y: 0.004962872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a2bfb59beb91be0800000000000000
+      internalID: -1505962897057306056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_14
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 191
+        width: 43
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5159781, y: -0.005246555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb6224b424042490800000000000000
+      internalID: -7772082501247144971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_15
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 191
+        width: 43
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ed99ba58d0b56f0800000000000000
+      internalID: -694946849737810377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_16
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 191
+        width: 45
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d1b1399d5bc4010800000000000000
+      internalID: 1174513548917415300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_17
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 190
+        width: 42
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ef91e17a9aa4c30800000000000000
+      internalID: 4344471325781917250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_18
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 193
+        width: 36
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96e8f91a682edb20800000000000000
+      internalID: 3161008424628053660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_19
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 192
+        width: 39
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1b5957ff6526b00800000000000000
+      internalID: 820313737324245408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_20
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 197
+        width: 45
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10fec3b8a6ab9b90800000000000000
+      internalID: -7234005132939169762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_21
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 192
+        width: 54
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d599702139c4e550800000000000000
+      internalID: 6189293000749323728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_22
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 104
+        width: 72
+        height: 69
+      alignment: 9
+      pivot: {x: 0.44273758, y: 0.009958571}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6143e4c04398450800000000000000
+      internalID: 6091457198451594947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_23
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 101
+        width: 86
+        height: 72
+      alignment: 9
+      pivot: {x: 0.34441075, y: 0.065014206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a8a3c55e144da10800000000000000
+      internalID: 1933242593399442063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_24
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 103
+        width: 84
+        height: 70
+      alignment: 9
+      pivot: {x: 0.2688061, y: 0.04587097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d57c1e2c2375790800000000000000
+      internalID: -7541503238415622763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pikeman_25
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 95
+        width: 48
+        height: 81
+      alignment: 9
+      pivot: {x: 0.6152751, y: 0.14370793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e168578e5d21d70800000000000000
+      internalID: 9012500998702636687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

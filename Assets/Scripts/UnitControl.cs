@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class UnitControl : MonoBehaviour
 {
+    private Camera MainCamera;
     private Vector3 targetPosition;
     private SpriteRenderer sprite;
-    private Collider phys;
-
+    private NavMeshPath controller;
+    private RaycastHit hit;
+    private NavMeshAgent agent;
+    private Vector3 vector3 = Vector3.zero;
     public float UnitSpeed;
     public bool isSelect;
 
@@ -15,12 +20,15 @@ public class UnitControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        MainCamera = Camera.main;
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        
-        GameObject controller = GameObject.FindGameObjectWithTag("GameController");
-        ResControl resurs = controller.GetComponent<ResControl>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = true;
+        controller = new NavMeshPath();
+
+        GameObject GO = GameObject.FindGameObjectWithTag("GameController");
+        ResControl resurs = GO.GetComponent<ResControl>();
         resurs.NewUnit(gameObject);
     }
 
@@ -29,18 +37,9 @@ public class UnitControl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && isSelect)
         {
-            Ray ray;
-            RaycastHit hit;
+            Physics.Raycast(MainCamera.ScreenPointToRay(Input.mousePosition), out hit);
 
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                targetPosition = hit.point;
-                targetPosition.y = 1;
-            }
-
-            if (targetPosition.x < transform.position.x)
+            if (hit.point.x < transform.position.x)
             {
                 sprite.flipX = true;
             }
@@ -48,15 +47,17 @@ public class UnitControl : MonoBehaviour
             {
                 sprite.flipX = false;
             }
-            animator.SetBool("Walk", true);
         }
 
-        if (!Mathf.Approximately(transform.position.magnitude, targetPosition.magnitude))
+        agent.CalculatePath(hit.point, controller);
+
+        agent.SetDestination(hit.point);
+
+        if (agent.velocity.magnitude > 0)
         {
-            GetComponent<Rigidbody>().position = Vector3.Lerp(transform.position, targetPosition, 1 / (UnitSpeed * (Vector3.Distance(transform.position, targetPosition))));
+            animator.SetBool("Walk", true);
         }
-        else
-        {
+        else{
             animator.SetBool("Walk", false);
         }
 

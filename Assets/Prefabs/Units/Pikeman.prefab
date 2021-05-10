@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 1816614926974176254}
   - component: {fileID: 1816614926974176241}
   - component: {fileID: 1816614926974176252}
-  - component: {fileID: 1816614926974176250}
-  - component: {fileID: 1816614926974176253}
   - component: {fileID: 1091943289}
+  - component: {fileID: 926541768}
   m_Layer: 3
   m_Name: Pikeman
   m_TagString: Unit
@@ -113,42 +112,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816614926974176240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b7d5b7046bc4304b994c175dd273fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UnitSpeed: 28
   isSelect: 0
---- !u!65 &1816614926974176250
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816614926974176240}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5066321, y: 0.5988301, z: 0.20000005}
-  m_Center: {x: 0.000118255615, y: 0.51451015, z: 2.062034e-16}
---- !u!54 &1816614926974176253
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816614926974176240}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 1
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!114 &1091943289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +131,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 168c0eceb5857f8418f535fd4e6860a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &926541768
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816614926974176240}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5487136
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 3.0791903
+  m_BaseOffset: 1.5395951
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

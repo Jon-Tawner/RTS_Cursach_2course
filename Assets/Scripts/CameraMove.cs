@@ -11,16 +11,17 @@ public class CameraMove : MonoBehaviour
     public float speed;                      //скорость передвижения камеры
     public bool useCameraMove;               //фиксация камеры (ВКЛ/ВЫКЛ)
 
+
     // Start is called before the first frame update
     void Start()
     {
         screenHeight = Screen.height;
         screenWight = Screen.width;
-    }
+}
 
-    // Update is called once per frame
     void Update()
     {
+        
         if (useCameraMove)
         {
             Vector3 camerPos = transform.position;

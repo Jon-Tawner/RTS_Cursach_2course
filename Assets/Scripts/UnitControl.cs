@@ -18,6 +18,7 @@ public class UnitControl : MonoBehaviour
         
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        
         GameObject controller = GameObject.FindGameObjectWithTag("GameController");
         ResControl resurs = controller.GetComponent<ResControl>();
         resurs.NewUnit(gameObject);

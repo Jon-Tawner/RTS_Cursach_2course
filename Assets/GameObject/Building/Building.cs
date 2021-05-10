@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Building : GameObj
 {
-    // Start is called before the first frame update
-    void Start()
+    public Renderer MainRenderer;
+    public Vector2Int Size = Vector2Int.one;
+
+    public void SetTransparent(bool availble)
     {
-        
+        if (availble)
+            MainRenderer.material.color = Color.green;
+        else
+            MainRenderer.material.color = Color.red;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetNormal(){
+        MainRenderer.material.color = Color.white;
+    }
+
+    private void OnDrawGizmosSelected()
     {
-        
+        for (int x = 0; x < Size.x; x++)
+        {
+            for (int y = 0; y < Size.y; y++)
+            {
+                Gizmos.color = new Color(0f, 1f, 0f, 0.31f);
+                Gizmos.DrawCube(transform.position + new Vector3(x, 0f, y), new Vector3(1f, .1f, 1f));
+
+            }
+        }
     }
 }

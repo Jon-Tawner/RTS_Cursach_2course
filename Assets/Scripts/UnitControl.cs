@@ -7,13 +7,10 @@ using UnityEngine.AI;
 public class UnitControl : MonoBehaviour
 {
     private Camera MainCamera;
-    private Vector3 targetPosition;
     private SpriteRenderer sprite;
     private NavMeshPath controller;
     private RaycastHit hit;
     private NavMeshAgent agent;
-    private Vector3 vector3 = Vector3.zero;
-    public float UnitSpeed;
     public bool isSelect;
 
     private Animator animator;

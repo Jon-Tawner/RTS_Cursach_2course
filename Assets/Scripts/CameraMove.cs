@@ -19,6 +19,10 @@ public class CameraMove : MonoBehaviour
         screenWight = Screen.width;
 }
 
+    public void setCameraMove(bool isMove){
+    useCameraMove = isMove;
+}
+
     void Update()
     {
         

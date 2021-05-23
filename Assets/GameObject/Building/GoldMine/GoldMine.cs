@@ -8,8 +8,7 @@ public class GoldMine : Building
     // Start is called before the first frame update
     void Start()
     {
-       Resistance = 10;
-       HP = 1500;
+        
     }
 
     // Update is called once per frame

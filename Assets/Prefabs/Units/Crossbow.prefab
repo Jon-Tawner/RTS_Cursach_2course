@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 3788371325094032795}
   - component: {fileID: 3788371325094032792}
   - component: {fileID: 7981442717281547715}
+  - component: {fileID: 846195601}
   - component: {fileID: 3788371325094032789}
+  - component: {fileID: 7028519057948722660}
   - component: {fileID: 736790647}
   - component: {fileID: 730176967}
-  - component: {fileID: 7028519057948722660}
   m_Layer: 3
   m_Name: Crossbow
   m_TagString: Unit
@@ -119,13 +120,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13dbb8e6327408c43adcf9e3796509b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 0
-  HP: 0
-  GoldCost: 0
-  Resistance: 0
+  AttackDistance: 5
+  HP: 60
+  GoldCost: 170
+  Resistance: 1
   Friend: 1
   isSelect: 0
-  Damage: 0
+  Damage: 20
+  SpeedAttack: 0.4
+--- !u!114 &846195601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788371325094032793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ea2b3cacd91734891483e3fff535f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3788371325094032789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +152,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7d5b7046bc4304b994c175dd273fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7028519057948722660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788371325094032793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &736790647
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -148,7 +180,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -174,16 +206,3 @@ CapsuleCollider:
   m_Height: 1.2539686
   m_Direction: 1
   m_Center: {x: 0.063814074, y: 0.5709678, z: 0}
---- !u!114 &7028519057948722660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3788371325094032793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panels: []

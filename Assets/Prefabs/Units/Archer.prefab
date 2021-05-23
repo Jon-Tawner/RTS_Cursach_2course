@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 891071032263471922}
   - component: {fileID: 891071032263471920}
   - component: {fileID: 2412628653954943226}
+  - component: {fileID: 1403293415}
   - component: {fileID: 891071032263471935}
+  - component: {fileID: 1462093424784603298}
   - component: {fileID: 2101324495}
   - component: {fileID: 1176350195}
-  - component: {fileID: 1462093424784603298}
   m_Layer: 3
   m_Name: Archer
   m_TagString: Unit
@@ -119,13 +120,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc78de1d0ae214841b50bcdd450c22dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 0
-  HP: 0
-  GoldCost: 0
-  Resistance: 0
+  AttackDistance: 5
+  HP: 50
+  GoldCost: 140
+  Resistance: 0.7
   Friend: 1
   isSelect: 0
-  Damage: 0
+  Damage: 12
+  SpeedAttack: 0.5
+--- !u!114 &1403293415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891071032263471923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ea2b3cacd91734891483e3fff535f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &891071032263471935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +152,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7d5b7046bc4304b994c175dd273fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1462093424784603298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891071032263471923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &2101324495
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -148,7 +180,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -174,16 +206,3 @@ CapsuleCollider:
   m_Height: 1.3800004
   m_Direction: 1
   m_Center: {x: 0, y: 0.68999994, z: 0.000000059604645}
---- !u!114 &1462093424784603298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891071032263471923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panels: []

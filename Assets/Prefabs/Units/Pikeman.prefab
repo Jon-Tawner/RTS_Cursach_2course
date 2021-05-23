@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 1816614926974176254}
   - component: {fileID: 1816614926974176241}
   - component: {fileID: 1009690282405605092}
+  - component: {fileID: 1782030846}
   - component: {fileID: 1816614926974176252}
+  - component: {fileID: 2870045721286963473}
   - component: {fileID: 926541768}
   - component: {fileID: 646653941}
-  - component: {fileID: 2870045721286963473}
   m_Layer: 3
   m_Name: Pikeman
   m_TagString: Unit
@@ -119,13 +120,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c177603bae7ba498ece75d8cb82f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 0
-  HP: 0
-  GoldCost: 0
-  Resistance: 0
+  AttackDistance: 1.5
+  HP: 60
+  GoldCost: 140
+  Resistance: 1
   Friend: 1
   isSelect: 0
-  Damage: 0
+  Damage: 15
+  SpeedAttack: 0.7
+--- !u!114 &1782030846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816614926974176240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ea2b3cacd91734891483e3fff535f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1816614926974176252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +152,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7d5b7046bc4304b994c175dd273fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2870045721286963473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816614926974176240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &926541768
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -148,7 +180,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -174,16 +206,3 @@ CapsuleCollider:
   m_Height: 1.5400003
   m_Direction: 1
   m_Center: {x: 0.068713635, y: 0.769594, z: 0}
---- !u!114 &2870045721286963473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816614926974176240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panels: []

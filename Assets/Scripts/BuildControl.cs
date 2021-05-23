@@ -10,7 +10,7 @@ public class BuildControl : MonoBehaviour
         GameObj thisGO = GetComponent<GameObj>();
         GameObject ScriptResurs = GameObject.FindGameObjectWithTag("GameController");
         ResControl resurs = ScriptResurs.GetComponent<ResControl>();
-        resurs.NewBuild(gameObject, thisGO.Friend);
+        resurs.NewBuild(thisGO, thisGO.Friend);
     }
 
 

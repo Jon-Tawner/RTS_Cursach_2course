@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 4059438715688660954}
   - component: {fileID: 4059438715688660955}
   - component: {fileID: 4059438715688660952}
+  - component: {fileID: 413371645}
   - component: {fileID: 4059438715688660935}
+  - component: {fileID: 4178681876249195974}
   - component: {fileID: 1849054153}
   - component: {fileID: 797367929}
-  - component: {fileID: 4178681876249195974}
   m_Layer: 3
   m_Name: Knight
   m_TagString: Unit
@@ -119,13 +120,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7257ae960507ed84f8e109e3ff8735ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 0
-  HP: 0
-  GoldCost: 0
-  Resistance: 0
+  AttackDistance: 1.5
+  HP: 100
+  GoldCost: 300
+  Resistance: 3
   Friend: 1
   isSelect: 0
-  Damage: 0
+  Damage: 30
+  SpeedAttack: 0.4
+--- !u!114 &413371645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059438715688660956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ea2b3cacd91734891483e3fff535f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4059438715688660935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +152,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7d5b7046bc4304b994c175dd273fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4178681876249195974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059438715688660956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &1849054153
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -148,7 +180,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.7
-  m_Speed: 3.5
+  m_Speed: 0.8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -174,16 +206,3 @@ CapsuleCollider:
   m_Height: 2.0000005
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4178681876249195974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4059438715688660956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191c6e0688958ca4da208f4405dd920f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panels: []

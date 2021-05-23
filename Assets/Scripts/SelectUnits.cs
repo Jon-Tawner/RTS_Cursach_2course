@@ -81,7 +81,7 @@ public class SelectUnits : MonoBehaviour
 
     private void SelectHightlighted()
     {
-        foreach (GameObject unit in resources.unitsFriend)
+        foreach (GameObj unit in resources.unitsFriend)
         {
             float x = unit.transform.position.x;
             float z = unit.transform.position.z;
@@ -108,11 +108,11 @@ public class SelectUnits : MonoBehaviour
 
     private void DeselectAll()
     {
-        foreach (GameObject unit in resources.unitsFriend)
+        foreach (GameObj unit in resources.unitsFriend)
         {
             unit.GetComponent<GameObj>().isSelect = false;
         }
-        foreach (GameObject build in resources.buildsFriend)
+        foreach (GameObj build in resources.buildsFriend)
         {
             build.GetComponent<GameObj>().isSelect = false;
         }

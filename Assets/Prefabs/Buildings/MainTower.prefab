@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2169180543453604885}
   - component: {fileID: 90113362}
   - component: {fileID: 8983922287945782780}
+  - component: {fileID: 1320994525}
   m_Layer: 7
   m_Name: MainTower
   m_TagString: Building
@@ -128,10 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bea986a74fae14d8b61cc0e04dd91f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 0
-  HP: 0
+  HP: 1000
   GoldCost: 0
-  Resistance: 0
+  Resistance: 8
   Friend: 1
   isSelect: 0
   MainRenderer: {fileID: 7744683067416158912}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7744683067416158913}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17f0904922caef44887322f2b93863b4, type: 3}
   m_Name: 
@@ -165,3 +165,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &1320994525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744683067416158913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

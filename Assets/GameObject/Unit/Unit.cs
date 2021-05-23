@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Unit : GameObj
 {
+    public double AttackDistance = 0;
     public float Damage = 0;
     public float SpeedAttack = 0;
     // Start is called before the first frame update

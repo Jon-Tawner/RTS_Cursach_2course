@@ -29,11 +29,11 @@ public class UnitControl : MonoBehaviour
 
         GameObject GO = GameObject.FindGameObjectWithTag("GameController");
         ResControl resurs = GO.GetComponent<ResControl>();
-        resurs.NewUnit(gameObject, thisGO.Friend);
+        resurs.NewUnit(thisGO, thisGO.Friend);
         if (!thisGO.Friend)
         {
             positionTower = resurs.TowerFriend.transform;
-            hit.point = positionTower.position - new Vector3(2f, 0f, 0f);
+            hit.point = positionTower.position;
         }
     }
 
@@ -52,9 +52,9 @@ public class UnitControl : MonoBehaviour
             {
                 sprite.flipX = false;
             }
-            agent.CalculatePath(hit.point, controller);
-        }
 
+        }
+        
         agent.SetDestination(hit.point);
 
         if (agent.velocity.magnitude > 0)
@@ -65,6 +65,5 @@ public class UnitControl : MonoBehaviour
         {
             animator.SetBool("Walk", false);
         }
-
     }
 }

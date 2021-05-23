@@ -8,8 +8,7 @@ public class MainTower : Building
     // Start is called before the first frame update
     void Start()
     {
-        Resistance = 15;
-        HP = 3000;
+        
     }
 
     // Update is called once per frame

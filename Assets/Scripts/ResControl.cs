@@ -8,15 +8,18 @@ public class ResControl : MonoBehaviour
 {
     public Text resourceText;
 
-    private int gold;
-    private int eat;
+    private int goldFriend;
+    private int goldEnemy;
+    private int eatFriend;
+    private int eatEnemy;
     private int population;
     public bool multiSelect = false;
 
-    public List<GameObject> unitsFriend;
-    public List<GameObject> unitsEnemy;
-    public List<GameObject> buildsFriend;
-    public List<GameObject> buildsEnemy;
+
+    public List<GameObj> unitsFriend;
+    public List<GameObj> unitsEnemy;
+    public List<GameObj> buildsFriend;
+    public List<GameObj> buildsEnemy;
     public GameObj TowerFriend;
     public GameObj TowerEnemy;
 
@@ -29,16 +32,16 @@ public class ResControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        resourceText.text = "Золото: " + gold + "  Еда: " + eat + " | " + "Население: " +
+        resourceText.text = "Золото: " + goldFriend + "  Еда: " + eatEnemy + " | " + "Население: " +
             unitsFriend.Count + " Строений " + buildsFriend.Count;
 
         if (TowerFriend == null)
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene("Scenes/Failure");
         if (TowerEnemy == null)
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("Scenes/Win");
     }
 
-    public void NewUnit(GameObject unit, bool friend)
+    public void NewUnit(GameObj unit, bool friend)
     {
         if (friend)
             unitsFriend.Add(unit);
@@ -46,7 +49,7 @@ public class ResControl : MonoBehaviour
             unitsEnemy.Add(unit);
     }
 
-    public void NewBuild(GameObject build, bool friend)
+    public void NewBuild(GameObj build, bool friend)
     {
         if (friend)
             buildsFriend.Add(build);

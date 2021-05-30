@@ -5,15 +5,30 @@ using UnityEngine;
 public class GoldMine : Building
 {
     public int SpeedMine = 10;
-    // Start is called before the first frame update
+
+    private GameObj thisGO;
+    private ResControl resources;
+
     void Start()
     {
-        
+        thisGO = GetComponent<GameObj>();
+
+        GameObject GO = GameObject.FindGameObjectWithTag("GameController");
+        resources = GO.GetComponent<ResControl>();
+
+        StartCoroutine(Goldfarm());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Goldfarm()
     {
-        
+        while (true)
+        {
+            if (thisGO.Friend)
+                resources.goldFriend += SpeedMine;
+            else
+                resources.goldEnemy += SpeedMine;
+
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

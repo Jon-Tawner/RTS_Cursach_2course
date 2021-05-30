@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class UnitControl : MonoBehaviour
 {
+    public bool unitCanWalk = true;
+
     private Camera MainCamera;
     private SpriteRenderer sprite;
     private NavMeshPath controller;
@@ -22,7 +24,6 @@ public class UnitControl : MonoBehaviour
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = true;
         controller = new NavMeshPath();
         thisGO = GetComponent<GameObj>();
         hit.point = thisGO.transform.position;
@@ -40,30 +41,38 @@ public class UnitControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (thisGO.Friend && thisGO.isSelect && Input.GetMouseButtonDown(1))
+        GetComponent<Animator>().transform.Rotate(-90, 0f, 0f);
+        GetComponent<SpriteRenderer>().transform.Rotate(-90, 0f, 0f);
+        transform.Rotate(-90, 0f, 0f);
+        if (unitCanWalk)
         {
-            Physics.Raycast(MainCamera.ScreenPointToRay(Input.mousePosition), out hit);
-
-            if (hit.point.x < transform.position.x)
+            if (thisGO.Friend && thisGO.isSelect && Input.GetMouseButtonDown(1))
             {
-                sprite.flipX = true;
+                Physics.Raycast(MainCamera.ScreenPointToRay(Input.mousePosition), out hit);
+
+                if (hit.point.x < transform.position.x)
+                {
+                    sprite.flipX = true;
+                }
+                else
+                {
+                    sprite.flipX = false;
+                }
+
+            }
+
+            agent.SetDestination(hit.point);
+
+            if (agent.velocity.magnitude > 0)
+            {
+                animator.SetBool("Walk", true);
             }
             else
             {
-                sprite.flipX = false;
+                animator.SetBool("Walk", false);
             }
-
         }
-        
-        agent.SetDestination(hit.point);
-
-        if (agent.velocity.magnitude > 0)
-        {
-            animator.SetBool("Walk", true);
-        }
-        else
-        {
-            animator.SetBool("Walk", false);
-        }
+        else 
+            agent.SetDestination(transform.position);
     }
 }

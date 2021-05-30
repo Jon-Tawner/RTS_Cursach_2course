@@ -7,6 +7,9 @@ public class CameraMove : MonoBehaviour
     private int screenWight;                //ширина обзора камеры
     private int screenHeight;               //высота обзора камеры
 
+    public float speed_y;
+    public float max_Y, min_Y;
+
     public float max_X, min_X, max_Z, min_Z; //размеры карты по х и z
     public float speed;                      //скорость передвижения камеры
     public bool useCameraMove;               //фиксация камеры (ВКЛ/ВЫКЛ)
@@ -23,6 +26,7 @@ public class CameraMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
             useCameraMove = !useCameraMove;
+
         if (useCameraMove)
         {
             Vector3 camerPos = transform.position;
@@ -60,9 +64,12 @@ public class CameraMove : MonoBehaviour
             {
                 camerPos.z += Time.deltaTime * speed * 2;
             }
+            camerPos.y -= Input.GetAxis("Mouse ScrollWheel") * speed_y * Time.deltaTime;
+            float y = Mathf.Clamp(camerPos.y, min_Y, max_Y);
+            float x = Mathf.Clamp(camerPos.x, min_X, max_X);
+            float z = Mathf.Clamp(camerPos.z, min_Z, max_Z);
 
-
-            transform.position = new Vector3(Mathf.Clamp(camerPos.x, min_X, max_X), camerPos.y, Mathf.Clamp(camerPos.z, min_Z, max_Z));
+            transform.position = new Vector3(x, y, z);
         }
     }
 }

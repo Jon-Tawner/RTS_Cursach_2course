@@ -1,41 +1,48 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowPanelGO : MonoBehaviour
 {
-    private GameObject MultiSelectGO;
     private bool isMultiSelect = false;
-    private bool temp = true;
+    private bool ischange = true;
+
+    private ResControl control;
+    private Text panelHP;
+    private GameObject MultiSelectGO;
     private GameObj GO;
     public List<GameObject> panels;
 
     private void Start()
     {
-        MultiSelectGO = GameObject.FindGameObjectWithTag("GameController");
         GO = GetComponent<GameObj>();
+        panelHP = panels[0].GetComponentInChildren<Text>();
+        MultiSelectGO = GameObject.FindGameObjectWithTag("GameController");
+        control = MultiSelectGO.GetComponent<ResControl>();
     }
 
     void Update()
     {
         if (GO.Friend)
         {
-            isMultiSelect = MultiSelectGO.GetComponent<ResControl>().multiSelect;
+            isMultiSelect = control.multiSelect;
             if (GO.isSelect && !isMultiSelect)
             {
                 foreach (GameObject item in panels)
                 {
                     item.SetActive(true);
                 }
-                temp = GO.isSelect;
+                panelHP.text = Convert.ToString(GO.HP) + '/' + Convert.ToString(GO.MaxHP);
+                ischange = GO.isSelect;
             }
-            else if (GO.isSelect != temp)
+            else if (GO.isSelect != ischange)
             {
                 foreach (GameObject item in panels)
                 {
                     item.SetActive(false);
                 }
-                temp = GO.isSelect;
+                ischange = GO.isSelect;
             }
         }
     }

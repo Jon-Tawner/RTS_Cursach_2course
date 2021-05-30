@@ -8,11 +8,12 @@ public class ResControl : MonoBehaviour
 {
     public Text resourceText;
 
-    private int goldFriend;
-    private int goldEnemy;
-    private int eatFriend;
-    private int eatEnemy;
-    private int population;
+    public int goldFriend;
+    public int goldEnemy;
+    public int eatFriend;
+    public int eatEnemy;
+    public int MaxPopulationFriend;
+    public int MaxPopulationEnemy;
     public bool multiSelect = false;
 
 
@@ -23,17 +24,10 @@ public class ResControl : MonoBehaviour
     public GameObj TowerFriend;
     public GameObj TowerEnemy;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         resourceText.text = "Золото: " + goldFriend + "  Еда: " + eatEnemy + " | " + "Население: " +
-            unitsFriend.Count + " Строений " + buildsFriend.Count;
+            unitsFriend.Count + " Строений " + (buildsFriend.Count + 1);
 
         if (TowerFriend == null)
             SceneManager.LoadScene("Scenes/Failure");

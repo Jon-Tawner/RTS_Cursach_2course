@@ -1,19 +1,21 @@
-using System;
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
     private Unit thisGO;
     private ResControl resurs;
     private Animator animator;
-    private bool temp;
+    private UnitControl unitControl;
+    private bool isAttack;
     private float dist = 0;
-    // Start is called before the first frame update
+
     private void Start()
     {
         thisGO = GetComponent<Unit>();
         animator = GetComponent<Animator>();
+        unitControl = GetComponent<UnitControl>();
 
         GameObject ScriptResurs = GameObject.FindGameObjectWithTag("GameController");
         resurs = ScriptResurs.GetComponent<ResControl>();
@@ -22,77 +24,60 @@ public class Attack : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
-
     public IEnumerator AttackFoo()
     {
         while (true)
         {
-            if (thisGO.Friend)
+            if (!thisGO.isSelect)
             {
-                foreach (GameObj obj in resurs.unitsEnemy)
+                if (thisGO.Friend)
                 {
-                    dist = Vector3.Distance(obj.transform.position, this.transform.position);
-                    if (thisGO.AttackDistance >= dist)
-                    {
-                        temp = true;
-                        if (thisGO.Damage > obj.Resistance)
-                            obj.HP -= thisGO.Damage - obj.Resistance;
-                        break;
-                    }
+                    isAttack = FooAttack(resurs.unitsEnemy);
+                    if (!isAttack)
+                        isAttack = FooAttack(resurs.buildsEnemy);
                 }
-                foreach (GameObj obj in resurs.buildsEnemy)
+                else
                 {
-                    dist = Vector3.Distance(obj.transform.position, this.transform.position);
-                    if (thisGO.AttackDistance >= dist)
-                    {
-                        temp = true;
-                        if (thisGO.Damage > obj.Resistance)
-                            obj.HP -= thisGO.Damage - obj.Resistance;
-                        break;
-                    }
+                    isAttack = FooAttack(resurs.unitsFriend);
+                    if (!isAttack)
+                        isAttack = FooAttack(resurs.buildsFriend);
                 }
-            }
-            else
-            {
-                foreach (GameObj obj in resurs.unitsFriend)
-                {
-                    dist = Vector3.Distance(obj.transform.position, this.transform.position);
-                    if (thisGO.AttackDistance >= dist)
-                    {
-                        temp = true;
-                        if (thisGO.Damage > obj.Resistance)
-                            obj.HP -= thisGO.Damage - obj.Resistance;
-                        break;
-                    }
-                }
-                foreach (GameObj obj in resurs.buildsFriend)
-                {
-                    dist = Vector3.Distance(obj.transform.position, this.transform.position);
-                    if (thisGO.AttackDistance >= dist)
-                    {
-                        temp = true;
-                        if (thisGO.Damage > obj.Resistance)
-                            obj.HP -= thisGO.Damage - obj.Resistance;
-                        break;
-                    }
-                }
-            }
+                unitControl.unitCanWalk = !isAttack;
 
-            if (temp)
-            {
-                animator.SetBool("Attack", true);
+                if (isAttack)
+                {
+                    animator.SetBool("Attack", true);
+                }
+                else
+                {
+                    animator.SetBool("Attack", false);
+                }
+                isAttack = false;
             }
             else
             {
+                unitControl.unitCanWalk = true;
                 animator.SetBool("Attack", false);
             }
-            temp = false;
-
             yield return new WaitForSeconds(thisGO.SpeedAttack);
+
         }
     }
+    private bool FooAttack(List<GameObj> list)
+    {
+        foreach (GameObj obj in list)
+        {
+            dist = Vector3.Distance(obj.transform.position, this.transform.position);
+            if (thisGO.AttackDistance >= dist)
+            {
+                if (thisGO.Damage > obj.Resistance)
+                    obj.HP -= thisGO.Damage - obj.Resistance;
+                if(obj.HP<=0)
+                    list.Remove(obj);
+                return true;
+            }
+        }
+        return false;
+    }
 }
+

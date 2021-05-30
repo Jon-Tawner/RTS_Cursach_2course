@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7744683067416158912}
   - component: {fileID: 7744683067416158914}
   - component: {fileID: 7744683067416158917}
-  - component: {fileID: 2169180543453604885}
   - component: {fileID: 90113362}
   - component: {fileID: 8983922287945782780}
   - component: {fileID: 1320994525}
+  - component: {fileID: 6772779561041501800}
   m_Layer: 7
   m_Name: MainTower
   m_TagString: Building
@@ -117,25 +117,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &2169180543453604885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7744683067416158913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05bea986a74fae14d8b61cc0e04dd91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 1000
-  GoldCost: 0
-  Resistance: 8
-  Friend: 1
-  isSelect: 0
-  MainRenderer: {fileID: 7744683067416158912}
-  Size: {x: 5, y: 5}
 --- !u!114 &90113362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,3 +162,22 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &6772779561041501800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744683067416158913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cccd7fea78e13a4f9714418761bb1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1000
+  GoldCost: 0
+  Resistance: 8
+  Friend: 1
+  isSelect: 0
+  MainRenderer: {fileID: 0}
+  Size: {x: 5, y: 5}

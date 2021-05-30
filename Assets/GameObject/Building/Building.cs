@@ -20,7 +20,7 @@ public class Building : GameObj
         MainRenderer.material.color = Color.white;
     }
 
-    private void OnDrawGizmosSelected()
+    public void OnDrawGizmosSelected()
     {
         for (int x = 0; x < Size.x; x++)
         {

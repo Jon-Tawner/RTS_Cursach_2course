@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 925719998288589648}
   - component: {fileID: 925719998288589650}
   - component: {fileID: 925719998288589651}
-  - component: {fileID: 1368828244}
   - component: {fileID: 1494407722}
   - component: {fileID: 483845347155395983}
+  - component: {fileID: 7489217478999634057}
   m_Layer: 7
   m_Name: TowerDef
   m_TagString: Building
@@ -116,26 +116,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &1368828244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925719998288589647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05bea986a74fae14d8b61cc0e04dd91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackDistance: 0
-  HP: 0
-  GoldCost: 0
-  Resistance: 0
-  Friend: 1
-  isSelect: 0
-  MainRenderer: {fileID: 925719998288589648}
-  Size: {x: 1, y: 2}
 --- !u!114 &1494407722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +146,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &7489217478999634057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925719998288589647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55a1632faa13994e8723952134ef1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 40
+  GoldCost: 50
+  Resistance: 4
+  Friend: 1
+  isSelect: 0
+  MainRenderer: {fileID: 0}
+  Size: {x: 1, y: 1}
+  capacity: 3

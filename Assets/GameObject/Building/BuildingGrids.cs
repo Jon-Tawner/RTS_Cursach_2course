@@ -19,13 +19,13 @@ public class BuildingGrids : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    public void StartPlacingBuilding(Building buildingPrefab)
+    public void StartPlacingBuilding(Building building)
     {
         if (flyBuilding != null)
         {
             Destroy(flyBuilding.gameObject);
         }
-        flyBuilding = Instantiate(buildingPrefab);
+        flyBuilding = Instantiate(building);
     }
 
     // Update is called once per frame
@@ -34,7 +34,6 @@ public class BuildingGrids : MonoBehaviour
         if (flyBuilding != null)
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
             if (Physics.Raycast(ray, out hit))
             {
 
@@ -56,7 +55,7 @@ public class BuildingGrids : MonoBehaviour
                     Destroy(flyBuilding.gameObject);
                     flyBuilding = null;
                 }
-
+                
                 if (available && Input.GetMouseButtonDown(0))
                 {
                     for (int j = 0; j < flyBuilding.Size.x; j++)
@@ -70,10 +69,12 @@ public class BuildingGrids : MonoBehaviour
 
                     flyBuilding.SetNormal();
                     flyBuilding.GetComponent<BuildControl>().enabled = true;
+                    flyBuilding.GetComponent<ShowPanelGO>().enabled = true;
                     flyBuilding = null;
                 }
 
             }
+            
 
         }
     }

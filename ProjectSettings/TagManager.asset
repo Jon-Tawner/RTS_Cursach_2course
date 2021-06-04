@@ -7,6 +7,7 @@ TagManager:
   - Unit
   - Ground
   - Building
+  - HP
   layers:
   - Default
   - TransparentFX

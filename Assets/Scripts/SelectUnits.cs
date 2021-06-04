@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEditor.AI;
 
 public class SelectUnits : MonoBehaviour
 {
@@ -23,14 +20,12 @@ public class SelectUnits : MonoBehaviour
     private bool toSelecting;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         resources = GetComponent<ResControl>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -51,17 +46,21 @@ public class SelectUnits : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            toSelecting = false;
-            resources.multiSelect = false;
-            DeselectAll();
+            Physics.Raycast(ray, out hit);
+            if (hit.collider.gameObject.layer != 4)
+            {
+                toSelecting = false;
+                resources.multiSelect = false;
+                DeselectAll();
 
-            if (mouseStartPosition == Input.mousePosition)
-            {
-                SingleSelect();
-            }
-            else
-            {
-                MultiSelect();
+                if (mouseStartPosition == Input.mousePosition)
+                {
+                    SingleSelect();
+                }
+                else
+                {
+                    MultiSelect();
+                }
             }
         }
 
@@ -99,7 +98,7 @@ public class SelectUnits : MonoBehaviour
     private void SingleSelect()
     {
         string tag = hit.collider.gameObject.tag;
-        if (tag == "Unit"||tag=="Building")
+        if (tag == "Unit" || tag == "Building")
         {
             hit.collider.gameObject.GetComponentInParent<GameObj>().isSelect = true;
         }
@@ -120,7 +119,7 @@ public class SelectUnits : MonoBehaviour
 
     void OnGUI()
     {
-        if (toSelecting)
+        if (toSelecting && hit.collider.gameObject.layer !=4)
         {
             GUI.DrawTexture(new Rect(mouseX, mouseY, selectionWeight, selectionHeight), selectTexture);
         }

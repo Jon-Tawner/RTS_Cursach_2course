@@ -8,10 +8,10 @@ public class ResControl : MonoBehaviour
 {
     public Text resourceText;
 
-    public int goldFriend;
-    public int goldEnemy;
-    public int eatFriend;
-    public int eatEnemy;
+    public float goldFriend;
+    public float goldEnemy;
+    public float eatFriend;
+    public float eatEnemy;
     public int MaxPopulationFriend;
     public int MaxPopulationEnemy;
     public bool multiSelect = false;

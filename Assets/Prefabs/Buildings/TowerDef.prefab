@@ -159,8 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 40
+  MaxHP: 0
   GoldCost: 50
   Resistance: 4
+  TimeCreate: 0
   Friend: 1
   isSelect: 0
   MainRenderer: {fileID: 0}

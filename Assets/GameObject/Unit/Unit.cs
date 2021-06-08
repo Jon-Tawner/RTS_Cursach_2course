@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class Unit : GameObj
 {
-    public double AttackDistance = 0;
-    public float Damage = 0;
-    public float SpeedAttack = 0;
+    protected float AttackDistance = 0;
+    protected float Damage = 0;
+    protected float SpeedAttack = 0;
+
+    public float GetAttackDistance()
+    {
+        return AttackDistance;
+    }
+
+    public float GetDamage()
+    {
+        return Damage;
+    }
+
+    public float GetSpeedAttack()
+    {
+        return SpeedAttack;
+    }
 
 }

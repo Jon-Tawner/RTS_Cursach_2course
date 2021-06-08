@@ -15,9 +15,9 @@ public class CreatorUnits : MonoBehaviour
 
     public void CreateUnit(Unit unit)
     {
-        if (unit.GoldCost <= this.GetComponent<ResControl>().goldFriend)
+        if (unit.GetGoldCost() <= this.GetComponent<ResControl>().goldFriend)
         {
-            this.GetComponent<ResControl>().goldFriend -= unit.GoldCost;
+            this.GetComponent<ResControl>().goldFriend -= unit.GetGoldCost();
             unit.GetComponent<Attack>().enabled = true;
             unit.GetComponent<UnitControl>().enabled = true;
             unit.GetComponent<ShowPanelGO>().enabled = true;

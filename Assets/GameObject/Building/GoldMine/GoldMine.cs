@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class GoldMine : Building
 {
-    public int SpeedMine = 10;
+    private int SpeedMine = 10;
 
     private GameObj thisGO;
     private ResControl resources;
 
     void Start()
     {
+        MaxHP = HP = 500;
+        GoldCost = 500;
+        Resistance = 4;
+
         thisGO = GetComponent<GameObj>();
 
         GameObject GO = GameObject.FindGameObjectWithTag("GameController");
@@ -23,7 +27,7 @@ public class GoldMine : Building
     {
         while (true)
         {
-            if (thisGO.Friend)
+            if (thisGO.IsFriend())
                 resources.goldFriend += SpeedMine;
             else
                 resources.goldEnemy += SpeedMine;

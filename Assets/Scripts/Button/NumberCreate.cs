@@ -37,7 +37,7 @@ public class NumberCreate : MonoBehaviour
                 TNumb.text = Convert.ToString(numb);
             }
 
-            yield return new WaitForSeconds(unit.TimeCreate);
+            yield return new WaitForSeconds(unit.GetTimeCreate());
         }
     }
 

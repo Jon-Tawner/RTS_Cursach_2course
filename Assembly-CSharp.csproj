@@ -65,6 +65,7 @@
      <Compile Include="Assets\GameObject\Building\Protective\Bunker\Tower.cs" />
      <Compile Include="Assets\GameObject\Unit\Distant\CrossBow\CrossBow.cs" />
      <Compile Include="Assets\Scripts\Button\activeImage.cs" />
+     <Compile Include="Assets\Scripts\Button\Kastyl.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Unity/2020.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

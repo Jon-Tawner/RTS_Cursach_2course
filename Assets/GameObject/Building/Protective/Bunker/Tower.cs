@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Tower : Protective
 {
-    public int capacity = 3;
+    private int capacity = 3;
+
+    private void Start() {
+        MaxHP = HP = 350;
+        GoldCost = 200;
+        Resistance = 4;
+    }
 }

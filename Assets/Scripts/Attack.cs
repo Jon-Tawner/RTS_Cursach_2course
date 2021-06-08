@@ -28,9 +28,9 @@ public class Attack : MonoBehaviour
     {
         while (true)
         {
-            if (!thisGO.isSelect)
+            if (!thisGO.IsSelect())
             {
-                if (thisGO.Friend)
+                if (thisGO.IsFriend())
                 {
                     isAttack = FooAttack(resurs.unitsEnemy);
                     if (!isAttack)
@@ -59,7 +59,7 @@ public class Attack : MonoBehaviour
                 unitControl.unitCanWalk = true;
                 animator.SetBool("Attack", false);
             }
-            yield return new WaitForSeconds(thisGO.SpeedAttack);
+            yield return new WaitForSeconds(thisGO.GetSpeedAttack());
 
         }
     }
@@ -68,11 +68,11 @@ public class Attack : MonoBehaviour
         foreach (GameObj obj in list)
         {
             dist = Vector3.Distance(obj.transform.position, this.transform.position);
-            if (thisGO.AttackDistance >= dist)
+            if (thisGO.GetAttackDistance() >= dist)
             {
-                if (thisGO.Damage > obj.Resistance)
-                    obj.HP -= thisGO.Damage - obj.Resistance;
-                if(obj.HP<=0)
+                if (thisGO.GetDamage() > obj.GetResistance())
+                    obj.SetHP(obj.GetHP() - (thisGO.GetDamage() - obj.GetResistance()));
+                if(obj.GetHP()<=0)
                     list.Remove(obj);
                 return true;
             }

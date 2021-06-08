@@ -24,25 +24,25 @@ public class ShowPanelGO : MonoBehaviour
 
     void Update()
     {
-        if (GO.Friend)
+        if (GO.IsFriend())
         {
             isMultiSelect = control.multiSelect;
-            if (GO.isSelect && !isMultiSelect)
+            if (GO.IsSelect() && !isMultiSelect)
             {
                 foreach (GameObject item in panels)
                 {
                     item.SetActive(true);
                 }
-                panelHP.text = Convert.ToString(GO.HP) + '/' + Convert.ToString(GO.MaxHP);
-                ischange = GO.isSelect;
+                panelHP.text = Convert.ToString(GO.GetHP()) + '/' + Convert.ToString(GO.GetMaxHP());
+                ischange = GO.IsSelect();
             }
-            else if (GO.isSelect != ischange)
+            else if (GO.IsSelect() != ischange)
             {
                 foreach (GameObject item in panels)
                 {
                     item.SetActive(false);
                 }
-                ischange = GO.isSelect;
+                ischange = GO.IsSelect();
             }
         }
     }

@@ -4,27 +4,82 @@ using UnityEngine.UI;
 
 public class GameObj : MonoBehaviour
 {
-    public float HP = 0;
-    public float MaxHP = 0;
-    public float GoldCost = 0;
-    public float Resistance = 0;
-    public float TimeCreate = 0;
-    public bool Friend = true;
-    public bool isSelect;
+    protected float HP = 0;
+    protected float MaxHP = 0;
+    protected float GoldCost = 0;
+    protected float Resistance = 0;
+    protected float TimeCreate = 0;
+    public bool Friend;
+    private bool isSelect;
 
-    private void Start()
-    {
-        MaxHP = HP;
-    }
 
     protected void Update()
     {
         if (HP <= 0)
         {
             isSelect = false;
-            GetComponent<Animator>().SetBool("Die",true);
-            Destroy(this.gameObject, 2f);
+            Destroy(this.gameObject);
         }
+    }
+
+    public float GetTimeCreate()
+    {
+        return TimeCreate;
+    }
+
+    public float GetResistance()
+    {
+        return Resistance;
+    }
+
+    public float GetHP()
+    {
+        return HP;
+    }
+
+    public float GetMaxHP()
+    {
+        return MaxHP;
+    }
+
+    public float GetGoldCost()
+    {
+        return GoldCost;
+    }
+
+    public bool IsFriend()
+    {
+        return Friend;
+    }
+
+    public bool IsSelect()
+    {
+        return isSelect;
+    }
+    
+    public void SetTimeCreate(float newTimeCreate)
+    {
+        TimeCreate = newTimeCreate;
+    }
+
+    public void SetResistance(float newResistance)
+    {
+        Resistance = newResistance;
+    }
+
+    public void SetHP(float newHP)
+    {
+        HP = newHP;
+    }
+
+    public void SetGoldCost(float NewGoldCost)
+    {
+        GoldCost = NewGoldCost;
+    }
+
+    public void SetIsSelect(bool NewIsSelect)
+    {
+        isSelect = NewIsSelect;
     }
 }
 

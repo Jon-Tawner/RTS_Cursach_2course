@@ -30,11 +30,11 @@ public class UnitControl : MonoBehaviour
 
         GameObject GO = GameObject.FindGameObjectWithTag("GameController");
         ResControl resurs = GO.GetComponent<ResControl>();
-        resurs.NewUnit(thisGO, thisGO.Friend);
-        if (!thisGO.Friend)
+        resurs.NewUnit(thisGO, thisGO.IsFriend());
+        if (!thisGO.IsFriend())
         {
             positionTower = resurs.TowerFriend.transform;
-            hit.point = positionTower.position;
+            hit.point = positionTower.position+Vector3.right;
         }
     }
 
@@ -46,7 +46,7 @@ public class UnitControl : MonoBehaviour
         transform.Rotate(-90, 0f, 0f);
         if (unitCanWalk)
         {
-            if (thisGO.Friend && thisGO.isSelect && Input.GetMouseButtonDown(1))
+            if (thisGO.IsFriend() && thisGO.IsSelect() && Input.GetMouseButtonDown(1))
             {
                 Physics.Raycast(MainCamera.ScreenPointToRay(Input.mousePosition), out hit);
 

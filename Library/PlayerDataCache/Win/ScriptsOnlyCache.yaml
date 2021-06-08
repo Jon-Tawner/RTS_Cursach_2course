@@ -49,7 +49,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineInspector
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -130,7 +129,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3856}
     - Class: 114
-      Script: {instanceID: 32518}
+      Script: {instanceID: 22196}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -463,7 +462,7 @@ ScriptsOnlyBuild:
     className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
-      Hash: 8c28d241e3310f974b3fcfcabbf28c10
+      Hash: b843842ee81bcba6ea0e39f5b53947f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GoldMine
@@ -517,7 +516,7 @@ ScriptsOnlyBuild:
     className: SelectUnits
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Warrior
@@ -547,7 +546,7 @@ ScriptsOnlyBuild:
     className: EnumerableTestState
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Knight
@@ -559,7 +558,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Archer
@@ -601,7 +600,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Peasant
@@ -649,7 +648,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 8dd7eeae5fbc27965d5726b12372a852
+      Hash: 4f07ec05727385484cf7793a6a5c039e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShowPanelGO
@@ -697,7 +696,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Close
@@ -721,13 +720,13 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 460476e89926734900cef8d8d774e4f2
+      Hash: b843842ee81bcba6ea0e39f5b53947f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Protective
   - hash:
       serializedVersion: 2
-      Hash: 460476e89926734900cef8d8d774e4f2
+      Hash: b843842ee81bcba6ea0e39f5b53947f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Building
@@ -769,7 +768,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pikeman
@@ -823,7 +822,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Unit
@@ -859,7 +858,7 @@ ScriptsOnlyBuild:
     className: UnitWalk
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Distant
@@ -913,7 +912,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 460476e89926734900cef8d8d774e4f2
+      Hash: b843842ee81bcba6ea0e39f5b53947f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainTower
@@ -1027,13 +1026,13 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 12d58bce7b54a3972b17f2e347109833
+      Hash: b843842ee81bcba6ea0e39f5b53947f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tower
   - hash:
       serializedVersion: 2
-      Hash: e68f6b3f8b43c770e16c07daebf046a1
+      Hash: 4c7842dc39e36590d5591600438bd386
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CrossBow
@@ -1051,7 +1050,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f54d475f83094bc74ea6f3bd3437bc66
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: activeImage
@@ -1087,4 +1086,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/3Save.unity
   - Assets/Scenes/Win.unity
   - Assets/Scenes/Failure.unity
-  playerPath: D:/Unity/Projects/CursachFolder/RTS_Cursach_2course-master/Build-1/Cursach.exe
+  playerPath: D:/Unity/Projects/CursachFolder/RTS_Cursach_2course-master/CursachBuild-2/Cursach.exe

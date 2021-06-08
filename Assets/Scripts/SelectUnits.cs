@@ -89,7 +89,7 @@ public class SelectUnits : MonoBehaviour
             {
                 if ((z > selectionStartPoint.z && z < selectionEndPoint.z) || (z < selectionStartPoint.z && z > selectionEndPoint.z))
                 {
-                    unit.GetComponent<GameObj>().isSelect = true;
+                    unit.GetComponent<GameObj>().SetIsSelect(true);
                 }
             }
         }
@@ -100,7 +100,7 @@ public class SelectUnits : MonoBehaviour
         string tag = hit.collider.gameObject.tag;
         if (tag == "Unit" || tag == "Building")
         {
-            hit.collider.gameObject.GetComponentInParent<GameObj>().isSelect = true;
+            hit.collider.gameObject.GetComponentInParent<GameObj>().SetIsSelect(true);
         }
 
     }
@@ -109,11 +109,11 @@ public class SelectUnits : MonoBehaviour
     {
         foreach (GameObj unit in resources.unitsFriend)
         {
-            unit.GetComponent<GameObj>().isSelect = false;
+            unit.GetComponent<GameObj>().SetIsSelect(false);
         }
         foreach (GameObj build in resources.buildsFriend)
         {
-            build.GetComponent<GameObj>().isSelect = false;
+            build.GetComponent<GameObj>().SetIsSelect(false);
         }
     }
 

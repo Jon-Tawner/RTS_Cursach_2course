@@ -5,6 +5,14 @@ using UnityEngine.UI;
 
 public class activeImage : MonoBehaviour
 {
+    public MainTower main;
+
+    private void Update()
+    {
+        if (!main.IsSelect())
+            SetActiveImage(false);
+    }
+
     public void SetActiveImage(bool isActive)
     {
         this.GetComponent<Image>().enabled = isActive;

@@ -27,7 +27,7 @@ public class ResControl : MonoBehaviour
     void Update()
     {
         resourceText.text = "Золото: " + goldFriend + "  Еда: " + eatEnemy + " | " + "Население: " +
-            unitsFriend.Count + " Строений " + (buildsFriend.Count + 1);
+            unitsFriend.Count + " Строений " + buildsFriend.Count;
 
         if (TowerFriend == null)
             SceneManager.LoadScene("Scenes/Failure");

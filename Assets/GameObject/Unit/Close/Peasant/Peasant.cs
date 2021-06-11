@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Peasant : Close
 {
-    private void Start() {
+    private void Start()
+    {
         MaxHP = HP = 40;
         GoldCost = 65;
         Resistance = 0.5f;
         TimeCreate = 1;
-        AttackDistance = 4;
+        AttackDistance = 2;
         Damage = 5;
-        SpeedAttack = 0.8f;
+        SpeedAttack = 1.8f;
+        this.GetComponent<Animator>().speed = SpeedAttack;
     }
 }

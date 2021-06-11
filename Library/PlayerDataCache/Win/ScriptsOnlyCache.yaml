@@ -9,6 +9,8 @@ ScriptsOnlyBuild:
     - CreatorUnits
     - CrossBow
     - GoldMine
+    - ImageView
+    - Kastyl
     - Knight
     - MainTower
     - NumberCreate
@@ -22,12 +24,12 @@ ScriptsOnlyBuild:
     - Tower
     - UnitControl
     - Warrior
-    - activeImage
     NavMeshComponents.dll:
     - UnityEngine.AI.NavMeshModifier
     - UnityEngine.AI.NavMeshSurface
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
+    - UnityEditor.U2D.Animation.SkinningCachePersistentState
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
@@ -46,10 +48,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -127,9 +127,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3856}
+      Script: {instanceID: 3858}
     - Class: 114
-      Script: {instanceID: 22196}
+      Script: {instanceID: 30946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -180,7 +180,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 3856}
+      Script: {instanceID: 3858}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -283,25 +283,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3422}
     - Class: 114
-      Script: {instanceID: 3438}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 3666}
+      Script: {instanceID: 3440}
     - Class: 114
-      Script: {instanceID: 3808}
+      Script: {instanceID: 3668}
     - Class: 114
-      Script: {instanceID: 3828}
+      Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 3856}
+      Script: {instanceID: 3830}
     - Class: 114
-      Script: {instanceID: 3908}
+      Script: {instanceID: 3858}
     - Class: 114
-      Script: {instanceID: 3958}
+      Script: {instanceID: 3910}
     - Class: 114
-      Script: {instanceID: 4764}
+      Script: {instanceID: 3960}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4496}
     - Class: 114
-      Script: {instanceID: 4992}
+      Script: {instanceID: 4768}
+    - Class: 114
+      Script: {instanceID: 4814}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -354,7 +356,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3856}
+      Script: {instanceID: 3858}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -648,7 +650,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 4f07ec05727385484cf7793a6a5c039e
+      Hash: 8dd7eeae5fbc27965d5726b12372a852
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShowPanelGO
@@ -754,6 +756,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CreatorUnits
+  - hash:
+      serializedVersion: 2
+      Hash: 76681d51be78a9b9fd5e5164be56d7d9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Kastyl
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1014,6 +1022,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 235a1e8275c5d1ab2a1c0f017d90e1b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ImageView
+  - hash:
+      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1050,12 +1064,6 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: f54d475f83094bc74ea6f3bd3437bc66
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: activeImage
-  - hash:
-      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1086,4 +1094,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/3Save.unity
   - Assets/Scenes/Win.unity
   - Assets/Scenes/Failure.unity
-  playerPath: D:/Unity/Projects/CursachFolder/RTS_Cursach_2course-master/CursachBuild-2/Cursach.exe
+  playerPath: D:/Unity/Projects/CursachFolder/RTS_Cursach_2course-master/Build-1/Cursach.exe

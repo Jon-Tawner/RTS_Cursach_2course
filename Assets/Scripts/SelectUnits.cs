@@ -27,6 +27,13 @@ public class SelectUnits : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(UnityEngine.KeyCode.A) && Input.GetKey(UnityEngine.KeyCode.LeftControl))
+        {
+            foreach (Unit unit in resources.unitsFriend)
+                unit.SetIsSelect(true);
+            resources.multiSelect = true;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             toSelecting = true;
@@ -119,7 +126,7 @@ public class SelectUnits : MonoBehaviour
 
     void OnGUI()
     {
-        if (toSelecting && hit.collider.gameObject.layer !=4)
+        if (toSelecting && hit.collider.gameObject.layer != 4)
         {
             GUI.DrawTexture(new Rect(mouseX, mouseY, selectionWeight, selectionHeight), selectTexture);
         }

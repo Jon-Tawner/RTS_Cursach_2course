@@ -51,6 +51,7 @@
      <Compile Include="Assets\GameObject\Building\Protective\Protective.cs" />
      <Compile Include="Assets\GameObject\Building\Building.cs" />
      <Compile Include="Assets\Scripts\CreatorUnits.cs" />
+     <Compile Include="Assets\Scripts\Button\Kastyl.cs" />
      <Compile Include="Assets\Scripts\Attack.cs" />
      <Compile Include="Assets\GameObject\Unit\Close\Pikeman\Pikeman.cs" />
      <Compile Include="Assets\GameObject\Unit\Unit.cs" />
@@ -62,10 +63,9 @@
      <Compile Include="Assets\Scripts\Scenes.cs" />
      <Compile Include="Assets\GameObject\Building\MainTower\MainTower.cs" />
      <Compile Include="Assets\GameObject\Building\BuildingGrids.cs" />
+     <Compile Include="Assets\Scripts\Button\ImageView.cs" />
      <Compile Include="Assets\GameObject\Building\Protective\Bunker\Tower.cs" />
      <Compile Include="Assets\GameObject\Unit\Distant\CrossBow\CrossBow.cs" />
-     <Compile Include="Assets\Scripts\Button\activeImage.cs" />
-     <Compile Include="Assets\Scripts\Button\Kastyl.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Unity/2020.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

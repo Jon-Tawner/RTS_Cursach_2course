@@ -45,13 +45,10 @@ public class Attack : MonoBehaviour
                 unitControl.unitCanWalk = !isAttack;
 
                 if (isAttack)
-                {
                     animator.SetBool("Attack", true);
-                }
                 else
-                {
                     animator.SetBool("Attack", false);
-                }
+
                 isAttack = false;
             }
             else
@@ -63,21 +60,20 @@ public class Attack : MonoBehaviour
 
         }
     }
+
     private bool FooAttack(List<GameObj> list)
     {
-        foreach (GameObj obj in list)
+        GameObj obj = thisGO.GetObjectInRadius(list, thisGO.GetAttackDistance());
+        if (obj != null)
         {
-            dist = Vector3.Distance(obj.transform.position, this.transform.position);
-            if (thisGO.GetAttackDistance() >= dist)
-            {
-                if (thisGO.GetDamage() > obj.GetResistance())
-                    obj.SetHP(obj.GetHP() - (thisGO.GetDamage() - obj.GetResistance()));
-                if(obj.GetHP()<=0)
-                    list.Remove(obj);
-                return true;
-            }
+            if (thisGO.GetDamage() > obj.GetResistance())
+                obj.SetHP(obj.GetHP() - (thisGO.GetDamage() - obj.GetResistance()));
+            if (obj.GetHP() <= 0)
+                list.Remove(obj);
+            return true;
         }
-        return false;
+        else
+            return false;
     }
 }
 

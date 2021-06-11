@@ -13,8 +13,9 @@ public class UnitControl : MonoBehaviour
     private NavMeshPath controller;
     private RaycastHit hit;
     private NavMeshAgent agent;
-    private GameObj thisGO;
+    private Unit thisGO;
     private Transform positionTower;
+    private ResControl resurs;
 
     private Animator animator;
     // Start is called before the first frame update
@@ -25,54 +26,65 @@ public class UnitControl : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
         controller = new NavMeshPath();
-        thisGO = GetComponent<GameObj>();
+        thisGO = GetComponent<Unit>();
         hit.point = thisGO.transform.position;
 
         GameObject GO = GameObject.FindGameObjectWithTag("GameController");
-        ResControl resurs = GO.GetComponent<ResControl>();
+        resurs = GO.GetComponent<ResControl>();
         resurs.NewUnit(thisGO, thisGO.IsFriend());
+
         if (!thisGO.IsFriend())
         {
             positionTower = resurs.TowerFriend.transform;
-            hit.point = positionTower.position+Vector3.right;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        GameObj obj = null;
         GetComponent<Animator>().transform.Rotate(-90, 0f, 0f);
         GetComponent<SpriteRenderer>().transform.Rotate(-90, 0f, 0f);
         transform.Rotate(-90, 0f, 0f);
         if (unitCanWalk)
         {
-            if (thisGO.IsFriend() && thisGO.IsSelect() && Input.GetMouseButtonDown(1))
+            if (!thisGO.IsFriend())
             {
-                Physics.Raycast(MainCamera.ScreenPointToRay(Input.mousePosition), out hit);
-
-                if (hit.point.x < transform.position.x)
-                {
-                    sprite.flipX = true;
-                }
+                obj = thisGO.GetObjectInRadius(resurs.unitsFriend, thisGO.GetViewDistance());
+                if (obj != null)
+                    hit.point = obj.transform.position;
                 else
-                {
-                    sprite.flipX = false;
-                }
-
+                    hit.point = positionTower.position + Vector3.right;
             }
+            else
+            {
+                if (thisGO.IsFriend() && thisGO.IsSelect() && Input.GetMouseButtonDown(1))
+                    Physics.Raycast(MainCamera.ScreenPointToRay(Input.mousePosition), out hit);
+
+                if (thisGO.Friend && !thisGO.IsSelect())
+                {
+                    obj = thisGO.GetObjectInRadius(resurs.unitsEnemy, thisGO.GetViewDistance());
+                    if (obj != null)
+                        obj = thisGO.GetObjectInRadius(resurs.buildsEnemy, thisGO.GetViewDistance());
+                }
+                if (obj != null)
+                    hit.point = obj.transform.position;
+            }
+
+            if (hit.point.x < transform.position.x)
+                sprite.flipX = true;
+            else
+                sprite.flipX = false;
 
             agent.SetDestination(hit.point);
 
             if (agent.velocity.magnitude > 0)
-            {
                 animator.SetBool("Walk", true);
-            }
             else
-            {
                 animator.SetBool("Walk", false);
-            }
+
         }
-        else 
+        else
             agent.SetDestination(transform.position);
     }
 }

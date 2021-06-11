@@ -56,7 +56,6 @@
      <Compile Include="Assets\GameObject\Unit\Close\Pikeman\Pikeman.cs" />
      <Compile Include="Assets\GameObject\Unit\Unit.cs" />
      <Compile Include="Assets\Scripts\ResControl.cs" />
-     <Compile Include="Assets\Scripts\UnitWalk.cs" />
      <Compile Include="Assets\GameObject\Unit\Distant\Distant.cs" />
      <Compile Include="Assets\Scripts\RepeatNavMeshBuild.cs" />
      <Compile Include="Assets\Scripts\Button\NumberCreate.cs" />
@@ -66,6 +65,7 @@
      <Compile Include="Assets\Scripts\Button\ImageView.cs" />
      <Compile Include="Assets\GameObject\Building\Protective\Bunker\Tower.cs" />
      <Compile Include="Assets\GameObject\Unit\Distant\CrossBow\CrossBow.cs" />
+     <Compile Include="Assets\Scripts\Button\temp.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Unity/2020.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

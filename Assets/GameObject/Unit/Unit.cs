@@ -31,9 +31,15 @@ public class Unit : GameObj
 
     public GameObj GetObjectInRadius(List<GameObj> list, float radius)
     {
+        Vector3 closestPointOnCollider;
         foreach (GameObj obj in list)
         {
-            float dist = Vector3.Distance(obj.transform.position, this.transform.position);
+            if (obj.tag == "Building")
+                closestPointOnCollider = obj.GetComponent<BoxCollider>().ClosestPoint(this.transform.position);
+            else
+                closestPointOnCollider = obj.transform.position;
+                
+            float dist = Vector3.Distance(closestPointOnCollider, this.transform.position);
             if (radius >= dist)
                 return obj;
         }
